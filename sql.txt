@@ -1,0 +1,10 @@
+
+// for making uppercase and lowercase to specific part of the code //   
+SELECT
+  user_id,
+  CONCAT(UCASE(LEFT(name, 1)), LCASE(SUBSTRING(name, 2))) AS corrected_name
+FROM Users;
+
+// FOR CHECKING A STRING IN BETWEEN OR ANYWHERE 
+SELECT PATIENT_ID , PATIENT_NAME ,CONDITIONS FROM PATIENTS 
+WHERE UPPER(CONDITIONS) REGEXP '(^| )DIAB1';
