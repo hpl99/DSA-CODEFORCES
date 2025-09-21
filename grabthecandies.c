@@ -25,10 +25,12 @@ int main(){
                 bia+=arr[i];
             }
         }
-        if(mia>bia){
+        if(mia>bia)
+        {
             printf("YES\n");
         }
-        else{
+        else
+        {
             printf("NO\n");
         }
     }
