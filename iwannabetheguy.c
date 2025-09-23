@@ -9,16 +9,15 @@ int main(){
         scanf("%d %d",&a[i],&b[i]);
     }
     int count = 0;
-    for(int i= 0;i<n;i++)
-    {
-        if(a[i]==i || b[i]==i){
-            continue;
-        }
-        else{
-            count++;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            if((a[i]||b[j])!=j){
+                count++;
+            }
         }
     }
-    if(count==1){
+    if(count==0){
         printf("I become the guy.\n");
     }
     else{

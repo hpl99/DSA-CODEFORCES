@@ -1,26 +1,24 @@
 #include<stdio.h>
 int main(){
-    int n;
+    int n ;
     scanf("%d",&n);
-    long long arr[n];
-    for(int i=0;i<n;i++){
-        scanf("%lld",&arr[i]);
-    }
-    for(int i=0;i<n;i++)
-    {
-        int count = 0;
-        for(long long j=1;j<=arr[i];j++)
+    while(n--){
+        int x;
+         int count = 0;
+        scanf("%d",&x);
+        int arr[5]={2,3,5,7,11};
+        for(int i=0;i<5;i++)
         {
-            if(arr[i]%j==0)
-            {
+            if(x%arr[i]==0 && arr[i]!=x){
                 count++;
             }
         }
-        if(count == 3){
+         if(count==1)
+          {
             printf("YES\n");
         }
         else{
             printf("NO\n");
         }
+        }  
     }
-}

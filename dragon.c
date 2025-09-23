@@ -1,26 +1,24 @@
 #include<stdio.h>
 int main(){
-    int s, n;
-    scanf("%d %d",&s,&n);
-    int arr[n];
-    while(n--){
-        int count = 0;
-    for(int i=0;i<n;i++){
-        scanf("%d",&arr[i]);
+    int str;
+    int t;
+    scanf("%d %d",&str,&t);
+    int  max = 0;
+      int s1,bonus;
+    while(t--){
+      
+        scanf("%d %d",&s1,&bonus);
+        if(str>s1){
+            max = str;
+        }
     }
-for(int i=0;i<n;i++){
-if(s>=arr[i]){
-    s = s+arr[1];
-    count++;
-}
-}
-
-if(count==n){
-    printf("YES \n");
-    return 0;
-}
-else{
-    printf("NO \n");
+    int count = 0;
+    while(t--){
+        if(max>=s1){
+            count = 0;
+        }
+        else{
+            count++;
+        }
     }
-}
 }
