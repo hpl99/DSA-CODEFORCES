@@ -17,7 +17,7 @@ int main(){
                     int x = arr[i]&arr[j];
                     int y = arr[i]^arr[j];
                     if(x>=y)
-                    {
+                    {   
                         count++;
                     }
                 }
