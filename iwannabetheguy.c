@@ -4,20 +4,23 @@ int main(){
     scanf("%d",&n);
     int a[n];
     int b[n];
-    for(int i=0;i<n;i++)
+    for(int i=1;i<=n;i++)
     {
         scanf("%d %d",&a[i],&b[i]);
     }
     int count = 0;
-    int arr[n];
-    for(int i=0;i<n;i++){
-        for(int j=0;j<n;j++){
-            if((a[i]||b[j])!=j){
-                count++;
-            }
+    for(int i= 1;i<=n;i++)
+    {
+        if(a[i]==i || b[i]==i)
+        {
+            continue;
+        }
+        else
+        {
+            count++;
         }
     }
-    if(count==0){
+    if(count>=1){
         printf("I become the guy.\n");
     }
     else{
