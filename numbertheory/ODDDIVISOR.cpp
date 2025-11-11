@@ -34,17 +34,13 @@ int32_t main() {
     int t = 1;
     cin >> t;
     while(t--) {
+        // Write your logic here
         int n;
-        cin >> n;
-        int sum = 0;
-        vector<int> arr(n);
-        for(int i=0;i<n;i++){
-        cin >> arr[i];
-          sum+=arr[i];
-        }
-        if(sum>0)
-        cout << sum-n << endl;
-        else
-        cout << "1" << endl;
+        cin >> n ;
+       if (n & (n - 1)) {
+    cout << "YES\n";
+  } else {
+    cout << "NO\n";
+  }
     }
 }

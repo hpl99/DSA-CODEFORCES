@@ -29,22 +29,27 @@ int mod_pow(int a, int b, int m = MOD) {
     }
     return res;
 }
-int32_t main() {
+int32_t main() 
+{
     fast_io;
-    int t = 1;
-    cin >> t;
-    while(t--) {
-        int n;
-        cin >> n;
-        int sum = 0;
-        vector<int> arr(n);
-        for(int i=0;i<n;i++){
-        cin >> arr[i];
-          sum+=arr[i];
+    int n ;
+    cin >> n;
+    int sum  = 0;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++){
+    cin >> arr[i];
+    sum+=arr[i];
+}
+sort(arr.begin(),arr.end());
+int count = 0;
+int x = 0;
+for(int i=0;i<n;i++){
+    sum -=arr[n-1-i]; 
+        count+=arr[n-1-i];
+        x++;
+        if(count>sum){
+            cout << x << endl;
+            return 0;
         }
-        if(sum>0)
-        cout << sum-n << endl;
-        else
-        cout << "1" << endl;
-    }
+}
 }

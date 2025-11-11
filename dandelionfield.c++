@@ -7,7 +7,7 @@ using namespace std;
 #define rall(x) (x).rbegin(), (x).rend()
 #define pb push_back
 #define ff first
-#define ss second
+#define ss secon
 #ifdef LOCAL
     #define debug(x) cerr << #x << " = " << x << endl;
 #else
@@ -29,22 +29,30 @@ int mod_pow(int a, int b, int m = MOD) {
     }
     return res;
 }
-int32_t main() {
+int32_t main(){
     fast_io;
     int t = 1;
     cin >> t;
     while(t--) {
-        int n;
+        int n ;
         cin >> n;
-        int sum = 0;
         vector<int> arr(n);
         for(int i=0;i<n;i++){
-        cin >> arr[i];
-          sum+=arr[i];
+            cin >> arr[i];
+        }
+        int count = 0;
+        int sum = 0;
+        for(int i=0;i<n;i++){
+            if(arr[i]&1){
+            sum++;
+            }
+            if(sum&1|| sum<=1){
+            count+=arr[i];
+            }
         }
         if(sum>0)
-        cout << sum-n << endl;
+        cout << count << endl;
         else
-        cout << "1" << endl;
+        cout << "0" << endl;
     }
 }

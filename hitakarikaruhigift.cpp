@@ -31,20 +31,19 @@ int mod_pow(int a, int b, int m = MOD) {
 }
 int32_t main() {
     fast_io;
-    int t = 1;
-    cin >> t;
-    while(t--) {
-        int n;
-        cin >> n;
-        int sum = 0;
-        vector<int> arr(n);
-        for(int i=0;i<n;i++){
+    int n ;
+    cin >> n;
+    int sum = 0;
+    vector<int> arr(n);
+    int two =0, one=0 ;
+    for(int i=0;i<n;i++){
         cin >> arr[i];
-          sum+=arr[i];
-        }
-        if(sum>0)
-        cout << sum-n << endl;
-        else
-        cout << "1" << endl;
+       if(arr[i]==100)
+       one++;
+       else two++;   
     }
+    int total = one + 2*two;
+    if(total%2==0 ) cout << "YES" << endl;
+    else cout << "NO" << endl;
+
 }

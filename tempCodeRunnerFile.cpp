@@ -37,20 +37,30 @@ int mod_pow(int a, int b, int m = MOD) {
 
 int32_t main() {
     fast_io;
-    int t ;
-    cin >> t;
-    while(t--) {
-        // Write your logic here
-         int n;
-  cin >> n;
-  int res = 0;
-  for (int pw = 1; pw <= n; pw = pw * 10 + 1) {
-    for (int d = 1; d <= 9;  d++) {
-      if (pw * d <= n) {
-        res++;
-      }
+    int n ;
+    cin >> n;
+    vector<int> arr(n);
+    vector<int> arr1(n);
+    for(int i=0;i<n;i++)
+    {
+        cin >> arr[i] >> arr1[i];
     }
-  }
-  cout << res << endl;
+    vector<int> hash(n);
+    sort(arr.begin(),arr.end());
+    for(int i=0;i<n;i++){
+        if(arr[i]!=i)
+        hash[i]=i;
     }
+    int found = 0;
+    for(int i=0;i<n;i++){
+        if(hash[i]==arr1[i]){
+            found=1;
+        }
+        else {
+            found = 0;
+            break;
+        }
+    }
+    if(found) cout<<"I become the guy." << endl;
+    else cout << "Oh, my keyboard!" << endl;
 }

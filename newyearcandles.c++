@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 #define fast_io ios::sync_with_stdio(false); cin.tie(nullptr);
 #define endl '\n'
 #define int long long
@@ -8,16 +9,20 @@ using namespace std;
 #define pb push_back
 #define ff first
 #define ss second
+
 #ifdef LOCAL
     #define debug(x) cerr << #x << " = " << x << endl;
 #else
     #define debug(x)
 #endif
+
 const int INF = 1e18;
 const int MOD = 1e9 + 7;
+
 using pii = pair<int,int>;
 using vi = vector<int>;
 using vvi = vector<vi>;
+
 int mod_add(int a, int b, int m = MOD) { return (a + b) % m; }
 int mod_mul(int a, int b, int m = MOD) { return (a * b) % m; }
 int mod_pow(int a, int b, int m = MOD) {
@@ -29,22 +34,16 @@ int mod_pow(int a, int b, int m = MOD) {
     }
     return res;
 }
+
 int32_t main() {
     fast_io;
-    int t = 1;
-    cin >> t;
-    while(t--) {
-        int n;
-        cin >> n;
-        int sum = 0;
-        vector<int> arr(n);
-        for(int i=0;i<n;i++){
-        cin >> arr[i];
-          sum+=arr[i];
-        }
-        if(sum>0)
-        cout << sum-n << endl;
-        else
-        cout << "1" << endl;
-    }
+    int a , b;
+    cin >> a >> b;
+    int count = 0;
+    int y = (a-a%b)/b;
+    count+=y+a;
+    if(y>=b){
+        count+=(y)/b;
+    }    
+    cout << count << endl;
 }

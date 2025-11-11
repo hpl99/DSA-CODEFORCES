@@ -29,22 +29,36 @@ int mod_pow(int a, int b, int m = MOD) {
     }
     return res;
 }
+int msb(int n){
+    int pos= 0;
+    while(n>1){
+        n>>=1;
+        pos++;
+    }
+    return pos;
+}
 int32_t main() {
     fast_io;
     int t = 1;
     cin >> t;
     while(t--) {
-        int n;
+        // Write your logic here
+        int n ;
         cin >> n;
-        int sum = 0;
         vector<int> arr(n);
-        for(int i=0;i<n;i++){
-        cin >> arr[i];
-          sum+=arr[i];
+        for(int i=0;i<n;i++)
+        {
+            cin >> arr[i];
         }
-        if(sum>0)
-        cout << sum-n << endl;
-        else
-        cout << "1" << endl;
+        vector<long long> count(64,0);
+        for(int i=0;i<n;i++){
+            int msbb = msb(arr[i]);
+            count[msbb]++;
+        }
+        long long ans = 0;
+        for(int i=0;i<64;i++){
+            ans+=count[i]*(count[i]-1)/2;
+        }
+        cout << ans << endl;
     }
 }

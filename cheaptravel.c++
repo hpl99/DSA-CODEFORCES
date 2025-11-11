@@ -42,7 +42,7 @@ int32_t main() {
     int x = n*a;
     int o = n%m;
     int y = (n/m)*b + o*a;
-    int j= (n/m)*b+o*b;
+    int j= (n/m)*b+b;
 
     cout <<  min({x,y,j}) << endl;
 }
