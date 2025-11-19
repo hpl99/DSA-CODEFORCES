@@ -34,6 +34,14 @@ int32_t main() {
     int t = 1;
     cin >> t;
     while(t--) {
-        // Write your logic here
+        int x,y;
+        cin >> x >> y;
+        int a , b;
+        cin >> a >> b;
+         int d = max(x,y);
+         int e = min(x,y);
+         int count = (x+y)*a;
+         int sum = (d-e)*a+e*b;
+        cout << min(count,sum) << endl;
     }
 }

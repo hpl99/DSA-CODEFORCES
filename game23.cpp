@@ -31,9 +31,25 @@ int mod_pow(int a, int b, int m = MOD) {
 }
 int32_t main() {
     fast_io;
-    int t = 1;
-    cin >> t;
-    while(t--) {
-        // Write your logic here
+    int n , m;
+    cin >> n >> m;
+    int sum = 0;
+    if(m==n || m<2*n){
+        cout <<"-1" << endl;
     }
+    else{
+    for(int i=0;m=1;i++){
+        if(n%3==0){
+            sum++;
+        }
+        else if(n%2==0){
+            sum++;
+        }
+        else{
+            cout << "-1" << endl;
+            break;
+        }
+    }
+}
+cout << sum << endl;
 }

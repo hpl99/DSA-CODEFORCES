@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 #define fast_io ios::sync_with_stdio(false); cin.tie(nullptr);
 #define endl '\n'
 #define int long long
@@ -8,16 +9,20 @@ using namespace std;
 #define pb push_back
 #define ff first
 #define ss second
+
 #ifdef LOCAL
     #define debug(x) cerr << #x << " = " << x << endl;
 #else
     #define debug(x)
 #endif
+
 const int INF = 1e18;
 const int MOD = 1e9 + 7;
+
 using pii = pair<int,int>;
 using vi = vector<int>;
 using vvi = vector<vi>;
+
 int mod_add(int a, int b, int m = MOD) { return (a + b) % m; }
 int mod_mul(int a, int b, int m = MOD) { return (a * b) % m; }
 int mod_pow(int a, int b, int m = MOD) {
@@ -29,11 +34,21 @@ int mod_pow(int a, int b, int m = MOD) {
     }
     return res;
 }
+
 int32_t main() {
     fast_io;
     int t = 1;
     cin >> t;
     while(t--) {
         // Write your logic here
+        int a,b,c,d,e,f;
+        cin >>a >> b >> c >> d >> e >> f ;
+        if((a==c && a==e )&&(b+d+f==a)){
+            cout << "YES" << endl;
+        }
+        else if(a-c==e && b-d==f){
+            cout << "YES" << endl;
+        }
+        else cout << "NO" <<endl;
     }
-}
+} 

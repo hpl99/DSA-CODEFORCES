@@ -34,6 +34,8 @@ int32_t main() {
     int t = 1;
     cin >> t;
     while(t--) {
-        // Write your logic here
+        int n,a,b;
+        cin >> n >> a >> b;
+        
     }
 }

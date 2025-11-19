@@ -35,5 +35,20 @@ int32_t main() {
     cin >> t;
     while(t--) {
         // Write your logic here
+        long long a , b , n;
+        cin >> a >> b >>n ;
+        long long x = a/n;
+        long long y = a/1;
+        if(x>=b){
+            cout << "1" << endl;
+        }
+        else {
+            if(y==b){
+                cout << "1" << endl;
+            }
+            else{
+            cout << "2" << endl;
+            }
+        }
     }
 }

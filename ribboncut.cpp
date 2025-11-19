@@ -31,9 +31,8 @@ int mod_pow(int a, int b, int m = MOD) {
 }
 int32_t main() {
     fast_io;
-    int t = 1;
-    cin >> t;
-    while(t--) {
-        // Write your logic here
-    }
+    int n,a , b , c;
+    cin >> n >> a >> b >> c;
+    int x = max(a,b,c);
+    int y = (x-n%x)/x; 
 }

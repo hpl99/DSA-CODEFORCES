@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 #define fast_io ios::sync_with_stdio(false); cin.tie(nullptr);
 #define endl '\n'
 #define int long long
@@ -9,20 +8,16 @@ using namespace std;
 #define pb push_back
 #define ff first
 #define ss second
-
 #ifdef LOCAL
     #define debug(x) cerr << #x << " = " << x << endl;
 #else
     #define debug(x)
 #endif
-
 const int INF = 1e18;
 const int MOD = 1e9 + 7;
-
 using pii = pair<int,int>;
 using vi = vector<int>;
 using vvi = vector<vi>;
-
 int mod_add(int a, int b, int m = MOD) { return (a + b) % m; }
 int mod_mul(int a, int b, int m = MOD) { return (a * b) % m; }
 int mod_pow(int a, int b, int m = MOD) {
@@ -44,7 +39,8 @@ int32_t main() {
    cin >> arr[i].first >> arr[i].second;
    sort(arr,arr+n);
   for(int i=0;i<n;i++){
-    if(s<=arr[i].first){
+    if(s<=arr[i].first)
+    {
     cout << "NO" << endl;
     return 0;
     }

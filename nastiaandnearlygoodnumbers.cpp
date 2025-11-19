@@ -35,5 +35,22 @@ int32_t main() {
     cin >> t;
     while(t--) {
         // Write your logic here
+        int a , b;
+        cin >> a >> b;
+        int x = 2*a*b - 2*a;
+        int y = 4*a*b - 3*a;
+        if(a==2 && b&1==0 || a==1){
+            cout << "NO"<< endl;
+        }
+        else{
+            if(a&1==0 && b&1==0 || a&1 && b&1){
+                cout << "YES" << endl;
+                cout << x << " "<< 2*a <<" "<< 2*a*b<< endl;
+            }
+            else{
+                cout << "YES " <<endl;
+                cout  << y <<" "<< 3*a <<" "<< 4*a*b << endl;
+            }
+        }
     }
 }

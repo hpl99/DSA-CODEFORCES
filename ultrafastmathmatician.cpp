@@ -31,9 +31,7 @@ int mod_pow(int a, int b, int m = MOD) {
 }
 int32_t main() {
     fast_io;
-    int t = 1;
-    cin >> t;
-    while(t--) {
-        // Write your logic here
-    }
+    int n ,x;
+    cin >> n >>x;
+    cout << (n ^ x) <<endl;
 }
