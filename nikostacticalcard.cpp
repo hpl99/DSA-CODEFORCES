@@ -1,4 +1,4 @@
-#include<iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 #define fast_io ios::sync_with_stdio(false); cin.tie(nullptr);
@@ -37,12 +37,35 @@ int mod_pow(int a, int b, int m = MOD) {
 
 int32_t main() {
     fast_io;
-    int n , m , a , b;
-    cin >> n >>m >>  a >> b ;
-    int x = n*a;
-    int o = n%m;
-    int y = (n/m)*b + o*a;
-    int j= (n/m)*b+b;
-
-    cout <<  min({x,y,j}) << endl;
-}
+    int t = 1;
+    cin >> t;
+          while (t--)
+    {
+        // Write your logic here
+        int n;
+        cin >> n;
+        vector<int> arr(n);
+        vector<int> arr1(n);
+        for (int i=0;i<n;i++){
+            cin >> arr[i];
+        }
+        for (int i=0;i<n;i++){
+            cin >> arr1[i];
+        }
+        int x = 0;
+        int y = 0;
+        for (int i=0;i< n;i++)
+        {   
+            int crezy = x;
+            int maggi = y;
+            int k =crezy - arr[i];
+            int e =arr1[i]- maggi;
+            int o = maggi-arr[i];
+            int u = arr1[i] - crezy;
+            x = max(k,e);
+            y = min(o,u);
+        }
+        cout << x <<endl;
+    }
+    return 0;
+    }

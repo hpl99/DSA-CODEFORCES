@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 #define fast_io ios::sync_with_stdio(false); cin.tie(nullptr);
 #define endl '\n'
 #define int long long
@@ -8,16 +9,20 @@ using namespace std;
 #define pb push_back
 #define ff first
 #define ss second
+
 #ifdef LOCAL
     #define debug(x) cerr << #x << " = " << x << endl;
 #else
     #define debug(x)
 #endif
+
 const int INF = 1e18;
 const int MOD = 1e9 + 7;
+
 using pii = pair<int,int>;
 using vi = vector<int>;
 using vvi = vector<vi>;
+
 int mod_add(int a, int b, int m = MOD) { return (a + b) % m; }
 int mod_mul(int a, int b, int m = MOD) { return (a * b) % m; }
 int mod_pow(int a, int b, int m = MOD) {
@@ -29,21 +34,31 @@ int mod_pow(int a, int b, int m = MOD) {
     }
     return res;
 }
+
 int32_t main() {
     fast_io;
-    int n ;
+    int n;
     cin >> n;
-    int sum = 0;
+    int one = 0,two=0;
     vector<int> arr(n);
-    int two =0, one=0 ;
     for(int i=0;i<n;i++){
         cin >> arr[i];
-       if(arr[i]==100)
-       one++;
-       else two++;   
+        if(arr[i]==100){
+            one++;
+        }
+        else{
+            two++;
+        }
     }
-    int total = one + 2*two;
-    if(total%2==0 ) cout << "YES" << endl;
-    else cout << "NO" << endl;
+    if(one%2==0 && one>1 || one == 0 && two%2==0){
+        cout << "YES" << endl;
+    }
+    else{
+        cout << "NO" << endl;
+    }
+    return 0;
 
 }
+// 200 odd and 100even always works 
+// 200 even and 100 odd 
+// 200 count even and 100 count even 

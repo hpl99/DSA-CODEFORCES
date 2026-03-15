@@ -1,6 +1,5 @@
-#include<iostream>
+#include <bits/stdc++.h>
 using namespace std;
-
 #define fast_io ios::sync_with_stdio(false); cin.tie(nullptr);
 #define endl '\n'
 #define int long long
@@ -9,20 +8,16 @@ using namespace std;
 #define pb push_back
 #define ff first
 #define ss second
-
 #ifdef LOCAL
     #define debug(x) cerr << #x << " = " << x << endl;
 #else
     #define debug(x)
 #endif
-
 const int INF = 1e18;
 const int MOD = 1e9 + 7;
-
 using pii = pair<int,int>;
 using vi = vector<int>;
 using vvi = vector<vi>;
-
 int mod_add(int a, int b, int m = MOD) { return (a + b) % m; }
 int mod_mul(int a, int b, int m = MOD) { return (a * b) % m; }
 int mod_pow(int a, int b, int m = MOD) {
@@ -34,15 +29,24 @@ int mod_pow(int a, int b, int m = MOD) {
     }
     return res;
 }
-
-int32_t main() {
+ long long t; 
+int32_t main(){
     fast_io;
-    int n , m , a , b;
-    cin >> n >>m >>  a >> b ;
-    int x = n*a;
-    int o = n%m;
-    int y = (n/m)*b + o*a;
-    int j= (n/m)*b+b;
-
-    cout <<  min({x,y,j}) << endl;
-}
+    int t = 1;
+    cin >> t;
+    while(t--){
+        long long n, x, y; cin >> n >> x >> y;
+        string s; 
+        cin >>s; 
+        s ='#'+s;
+        long long a=0,b=0;
+        for (long long i=1;i<=n;i++) {
+            a +=(s[i]=='4');
+            b +=(s[i]=='8');
+        }
+        x =abs(x); y = abs(y);
+        if (a+2*b<x+y) cout << "NO" << endl;
+        else if (a+b< max(x,y)) cout << "NO" << endl;
+        else cout<<"YES"<< endl;
+    }
+    }
